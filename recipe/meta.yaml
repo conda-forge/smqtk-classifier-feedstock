@@ -10,21 +10,21 @@ source:
   sha256: bd888e5eb718592b922cf24ea524ffad08f24c06e6203f638c6a2aeb5304f632
 
 build:
-  noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
 
 requirements:
   host:
-    - python {{ python_min }}
+    - python
     - pip
     - poetry-core
   run:
-    - python >={{ python_min }},<4.0
-    - numpy >=1.19.5,<2.0.0
-    - smqtk-core >=0.18.0
-    - smqtk-dataprovider >=0.16.0
-    - smqtk-descriptors >=0.18
+    - python
+    - numpy >=1.23.5,<2.0  # [py<=312]
+    - numpy >=2.1  # [py>312]
+    - smqtk-core >=0.20.0
+    - smqtk-dataprovider >=0.19.0
+    - smqtk-descriptors >=0.20.0
 
 test:
   imports:
