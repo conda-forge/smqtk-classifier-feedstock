@@ -25,6 +25,9 @@ requirements:
     - smqtk-core >=0.22.0
     - smqtk-dataprovider >=0.20.0
     - smqtk-descriptors >=0.21.0
+  run_constrained:
+    - scikit-learn >=1.6
+    - scipy >=1.8
 
 test:
   imports:
