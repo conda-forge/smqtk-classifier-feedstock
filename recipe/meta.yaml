@@ -1,17 +1,17 @@
 {% set name = "smqtk-classifier" %}
-{% set version = "0.20.0" %}
+{% set version = "0.21.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/smqtk_classifier-{{ version }}.tar.gz
-  sha256: bd888e5eb718592b922cf24ea524ffad08f24c06e6203f638c6a2aeb5304f632
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/smqtk_classifier-{{ version }}.tar.gz
+  sha256: e9e1141f6f46dcf15dcf4d07f07d466c639faecb24c2ccdbbcfb445b993e7bd4
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
